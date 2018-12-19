@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>click_menu</title>
+	<link rel="stylesheet" href="./css/click_menu.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function () {
+
+			$('.banner li a').click(function (e) {
+				e.preventDefault()
+				var tg = $(this).attr('href')
+				$('.content div').stop().fadeOut()
+				$(tg).stop().fadeIn()
+			});
+
+		});
+	</script>
+</head>
+
+<body>
+	<div class="banner">
+		<div class="content f-l">
+			<div id="con1" class="on"><img src="./img/boy.jpg" alt=""></div>
+			<div id="con2"><img src="./img/friend1.jpg" alt=""></div>
+			<div id="con3"><img src="./img/friend2.jpg" alt=""></div>
+			<div id="con4"><img src="./img/friend3.jpg" alt=""></div>
+			<div id="con5"><img src="./img/friend4.jpg" alt=""></div>
+			<div id="con6"><img src="./img/dog.jpg" alt=""></div>
+			<div id="con7"><img src="./img/baby.jpg" alt=""></div>
+			<div id="con8"><img src="./img/mom.jpg" alt=""></div>
+			<div id="con9"><img src="./img/dad.jpg" alt=""></div>
+		</div>
+
+		<ul class="f-r menu">
+			<li><a href="#con1">짱구</a></li>
+			<li><a href="#con2">철수</a></li>
+			<li><a href="#con3">훈이</a></li>
+			<li><a href="#con4">맹구</a></li>
+			<li><a href="#con5">유리</a></li>
+			<li><a href="#con6">흰둥이</a></li>
+			<li><a href="#con7">짱아</a></li>
+			<li><a href="#con8">봉미선</a></li>
+			<li><a href="#con9">신형만</a></li>
+		</ul>
+	</div>
+</body>
+
+</html>
